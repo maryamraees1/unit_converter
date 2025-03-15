@@ -10,7 +10,7 @@ def convert_values(unit_category,value,unit):
         if unit=="meters to inches":  
             return value *39.37,"inches"
         elif unit=="inches to meters":
-            return value / 39.37 , "meters" , "You can divide the value by 39.37"
+            return value / 39.37 , "meters" 
 
     elif unit_category=="Time":
         if unit=="hours to mins": 
@@ -38,7 +38,7 @@ elif unit_category=="Weight":
 value=st.number_input("Enter value :")
 # emoji list
 emojis=["😒","🤷‍♂️","🙄","😶‍🌫️","🫠","🙃","🫤","😕","😔","😭","🥴","😵‍💫","🤡","🥸","🧐","👽","😺","🦒","🫎","🐳","🐟","🦈","🪸","🐦‍🔥","🐌","🧞","🤺","🧗‍♂️","🚵","🎀","🪡","🔐"]
-# cpnvert button
+# convert button
 if st.button("Convert"):
     result ,units = convert_values(unit_category,value,unit)
     random_emoji = random.choice(emojis)
